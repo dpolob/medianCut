@@ -5,7 +5,6 @@ Las ideas y mejor explicacion tomados de http://joelcarlson.github.io/2016/01/15
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.pylab as plt
 
 
 class Cubo():
@@ -61,9 +60,9 @@ class Cubo():
     def __str__(self):
         """
         Representa:
-        id del objeto, Max(Canal Rojo) - Min(Canal Rojo),
-                       Max(Canal Verde) - Min(Canal Verde),
-                       Max(Canal Azul) - Min(Canal Azul),
+        id del objeto, Max(Canal Rojo) , Min(Canal Rojo),
+                       Max(Canal Verde) , Min(Canal Verde),
+                       Max(Canal Azul) , Min(Canal Azul),
                        Componentes totales del cubo
         """ 
         cadena = "{}\t{}-{}\t{}-{}\t{}-{}\t{}".format(
