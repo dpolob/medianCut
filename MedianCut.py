@@ -80,11 +80,12 @@ datos = plt.imread('.\images\Graffiti.jpg')
 datos = datos.reshape(datos.shape[0] * datos.shape[1], datos.shape[2])
 # definir colores 
 n_colores = 64
+verbose = True
 #Crear lista de cubos
 cubos = []
 
 primercubo = Cubo(datos, np.arange(datos.shape[0]))
-cubos.append(cubo1)
+cubos.append(primercubo)
 
 for iteracion in range(n_colores - 1):
     rangos = np.array([item.mayorRango for item in cubos])
@@ -96,7 +97,7 @@ for iteracion in range(n_colores - 1):
     cubos.append(cubo2)
     print("Iteracion {}".format(iteracion))
     print("\t\tRangoR\tRangoG\tRangoB\tItems")
-    _ = [print(item) for item in cubos]
+    if verbose: _ = [print(item) for item in cubos]
 
 # Recuperar los colores, usando la mediana de cada canal de cada cubo
 resultado = np.zeros_like(datos)
